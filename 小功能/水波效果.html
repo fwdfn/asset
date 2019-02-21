@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            *{box-sizing: border-box;}
+            .dot{position: absolute;top:50px;left:50px;}
+            .dot-1{display:inline-block;width:10px;height:10px;background:red;border-radius: 50%;border:1px solid red;}
+            .dot-2{display: inline-block;width:40px;height:40px;border-radius: 50%;border:1px solid red;position: absolute;left:-15px;top:-15px;
+                   animation: dot 3s ease-out 0s; animation-iteration-count: infinite;
+                   box-shadow: 0 0 4px red, 0 0 10px red inset;   
+                   opacity:0.12;                
+            }
+            .dot-3{display: inline-block;width:40px;height:40px;border-radius: 50%;border:1px solid red;position: absolute;left:-15px;top:-15px;
+                   animation: dot 3s ease-out 1.5s; animation-iteration-count: infinite;
+                   box-shadow: 0 0 4px red, 0 0 10px red inset;      
+                   opacity:0.12;                          
+            }
+            @keyframes dot{
+                0%{transform: scale(0)}
+                100%{transform: scale(1)}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dot">
+            <span class="dot-1"></span>
+            <span class="dot-2"></span>            
+            <span class="dot-3"></span>            
+        </div>
+    </body>
+</html>
