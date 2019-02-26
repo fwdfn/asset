@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>水平垂直居中的n种方法</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <style>
+        .container1{
+            width:200px;
+            height:200px;
+            border:1px solid black;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+        }
+
+        .container2{
+            width:200px;
+            height: 200px;
+            border:1px solid black;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left:-100px;
+            margin-top:-100px;            
+        }
+
+        .container3{
+            width:200px;
+            height: 200px;
+            border:1px solid black;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+
+        /* 方案四
+        body{
+            margin:0;padding:0;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;                        
+            border:1px solid black;
+        } */
+        .container4{
+            width:100px;
+            height: 100px;
+            border:1px solid black; 
+        }       
+
+        .container5{                        
+            display: table;            
+        }
+        .cell{
+            width:200px;
+            height: 200px;
+            border: 1px solid black;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;    
+        }
+        .container6{
+            width:400px;
+            height:400px;
+            border:1px solid black;
+        }
+        .item6{
+            width:200px;
+            height:200px;
+            color:white;
+            background:red;
+            background-clip:content-box;
+            padding: calc((100% - 200px) / 2);            
+            line-height: 200px;
+            text-align: center;
+        }
+        .container-test{
+            display: table;                       
+        }
+        .test-cell{            
+            display: table-cell;
+            width:200px;
+            height: 200px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 方法一 定位和margin:auto -->
+    <!-- <div class="container1">
+        something here 1
+    </div> -->
+
+    <!-- 方法二 定位和div的margin负值 -->
+    <!-- <div class="container2">
+        something here 2
+    </div> -->
+
+    <!-- 方法三 定位配合css3的translate属性 -->
+    <!-- <div class="container3">
+        something here 3
+    </div> -->
+
+    <!-- 方法四 使用flex -->
+    <!-- <div class="container4">
+        something here 4
+    </div> -->
+
+    <!-- 方法五 使用display:table -->
+    <!-- <div class="container5">
+        <div class="cell">something here 5</div>        
+    </div> -->
+
+    <!-- 方法六 使用calc -->
+    <div class="container6">
+        <div class="item6">
+            something here 6
+        </div>        
+    </div>    
+</body>
+</html>
