@@ -1,0 +1,156 @@
+/* 此页面用于练习css3动画效果，参考于animate.css */
+
+/* 上下抖动效果 */
+@keyframes bounce{    
+    25%{transform: translateY(-40px)}
+    50%{transform: translateY(0px)}
+    75%{transform: translateY(-25px)}
+    100%{transform: translateY(0px)}  
+        /* from,
+        20%,
+        53%,
+        80%,
+        to {      
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);      
+        transform: translate3d(0, 0, 0);
+        }
+        40%,
+        43% {      
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);      
+        transform: translate3d(0, -30px, 0);
+        }  
+        70% {      
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);      
+        transform: translate3d(0, -15px, 0);
+        }  
+        90% {      
+        transform: translate3d(0, -4px, 0);
+        }     */
+}
+.bounce{
+    animation:bounce 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+/* flash效果 */
+@keyframes flash {          
+    0%,
+    50%, 
+    100% {
+        opacity: 1;
+    }
+    25%, 
+    75% {
+        opacity: 0;
+    }
+}
+.flash {            
+    animation: flash 1s linear 0s;
+}
+
+
+/* 脉跳效果 */
+@keyframes pulsh{    
+    from,
+    to{
+        transform: scale(1,1)
+    }
+    50%{
+        transform: scale3d(1.05,1.05,1.05)
+    }    
+}
+.pulsh{
+    animation: pulsh 1s ease-in-out 0s;
+}
+
+/* 橡皮筋效果 */
+@keyframes rubberBand{
+    /* 我的实现 */
+    /* 30%,100%{transform: scale(1,1)}
+    15%{transform:scale(1.5,.8)}    
+    45%{transform: scale(1.4,.9)}
+    60%{transform: scale(1,1)} */
+
+    /* 官方实现 */
+    from{transform:scale3d(1,1,1)}
+    30%{transform: scale3d(1.25,0.75,1)}
+    40%{transform: scale3d(0.75,1.25,1)}
+    50%{transform: scale3d(1.15,0.85,1)}
+    60%{transform: scale3d(0.95,1.05,1)}
+    70%{transform: scale3d(1.05,0.95,1)}
+    to{transform: scale3d(1,1,1)}
+}
+.rubberBand{
+    animation:rubberBand 1s cubic-bezier(0.2,0.8,0.9,0.9) 0s;
+}
+
+@keyframes shake{
+    from,to{transform: translate3d(0,0,0)}
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {transform: translate3d(-10px,0,0)}
+    
+    20%,
+    40%,
+    60%,
+    80% {transform: translate3d(10px,0,0)}    
+}
+.shake{
+    animation: shake 1s 0s;
+}
+
+@keyframes swing{     
+    20% {        
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40%{        
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60%{
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80%{
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    to{
+        transform: rotate3d(0,0,1,0deg)
+    }   
+}
+.swing{    
+    animation: swing 1s linear 0s;
+}
+
+@keyframes tada{
+    from{transform:scale3d(1.5,1.5,1) rotate(0deg);}
+    12%{transform: scale3d(1.25,1.25,1) rotate(7deg);}
+    24%{transform: scale3d(1.25,1.25,1) rotate(-7deg)}
+    36%{transform: scale3d(1.25,1.25,1) rotate(7deg)}
+    48%{transform: scale3d(1.25,1.25,1) rotate(-7deg)}
+    60%{transform: scale3d(1.25,1.25,1) rotate(7deg);}
+    72%{transform: scale3d(1.25,1.25,1) rotate(-7deg)}
+    82%{transform: scale3d(1.25,1.25,1) rotate(7deg)}
+    94%{transform: scale3d(1.25,1.25,1) rotate(-7deg)}    
+    to{transform: scale3d(1,1,1) rotate(0deg);}        
+}
+.tada{
+    animation:tada 1s linear 0s;
+}
+
+@keyframes wobble{
+    from{transform: translate3d(0,0,0) rotate(0deg)}
+    20%{transform: translate3d(-50px,0,0) rotate(-5deg)}
+    40%{transform: translate3d(50px,0,0) rotate(0deg)}
+    60%{transform: translate3d(-50px,0,0) rotate(5deg)}
+    80%{transform: translate3d(50px,0,0) rotate(0deg)}
+    to{transform: translate3d(0,0,0) rotate(0deg)}
+}
+.wobble{
+    animation: wobble 1s linear 0s;
+}
+
+
+
+
+
+
