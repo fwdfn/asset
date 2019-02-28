@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='resources/css/animate.css' rel='stylesheet' type='text/css'>
+    <script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        html{overflow: hidden;font:100%/1.5 "Roboto", Verdana, sans-serif;}
+       *{margin:0;padding:0;box-sizing:border-box;}       
+       .text{
+           width:200px;
+           height: 200px;           
+           position: absolute;
+           left:50%;
+           top:50%;
+           transform: translate(-50%,-50%);            
+           text-align: center;
+           /* line-height: 200px; */
+       }
+       h1{       
+           display: inline-block;    
+           font-size: 3rem;
+       }
+    </style>  
+    <script>
+        $(function(){
+            $("#select").change(function(){
+                $(".text").children().eq(0).removeClass().addClass($("#select").val());                
+            })
+        })        
+    </script> 
+</head>
+<body>
+    <div class="text">
+        <h1 class="rollIn">animate</h1>
+    </div>
+    <div>
+        <select id="select">
+            <optgroup label="Attention Seekers">
+                <option value="bounce">bounce</option>
+                <option value="flash">flash</option>
+                <option value="pulsh">pulsh</option>
+                <option value="rubberBand">rubberBand</option>
+                <option value="shake">shake</option>
+                <option value="tada">tada</option>
+                <option value="wobble">wobble</option>
+                <option value="heartBeat">heartBeat</option>
+                <option value="jello">jello</option>                
+            </optgroup>                   
+            <optgroup label="Bouncing Entrances">
+                <option value="bounceIn">bounceIn</option>
+                <option value="bounceDown">bounceDown</option>
+                <option value="bounceLeft">bounceLeft</option>
+                <option value="bounceRight">bounceRight</option>
+                <option value="bounceUp">bounceUp</option>         
+            </optgroup>     
+            <optgroup label="Bouncing Exits">
+                <option value="bounceOut">bounceOut</option>
+                <option value="bounceOutDown">bounceOutDown</option>
+                <option value="bounceOutLeft">bounceOutLeft</option>         
+            </optgroup>
+            <optgroup label="Fade">
+                <option value="fadeIn">fadeIn</option>
+                <option value="fadeInDown">fadeInDown</option>
+                <option value="fadeInRightBig">fadeInRightBig</option>
+                <option value="fadeOut">fadeOut</option>                
+            </optgroup>
+            <optgroup label="flippers">
+                <option value="flip">flip</option>
+                <option value="flipInX">flipInX</option>
+                
+            </optgroup>
+            <optgroup label="LightSpeed">
+                <option value="lightSpeedIn">lightSpeedIn</option>
+                <option value="lightSpeedOut">lightSpeedOut</option>                                    
+            </optgroup>
+            <optgroup label="Rotate">
+                <option value="rotateIn">rotateIn</option>
+                <option value="rotateDownRight">rotateDownRight</option>
+                <option value="rotateUpLeft">rotateUpLeft</option>                
+            </optgroup>
+            <optgroup label="Slide">
+                <option value="slideInRight">slideInRight</option>                
+            </optgroup>
+            <optgroup label="Special">
+                <option value="hinge">hinge</option>
+                <option value="rollIn">rollIn</option>                
+            </optgroup>
+        </select>
+    </div>
+</body>
+</html>
