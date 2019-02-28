@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <title>hoverBorder</title>
+    <style>
+        body{margin:0;padding:0;box-sizing:content-box;}
+        .container{width:100px;height:100px;background:black;position: relative;}
+        .top{height:2px;width:0px;background:green;position: absolute;top:0;left:0;transition: all 1s;}
+        .right{height:0px;width:2px;background:green;position:absolute;top:0;right:0;transition: all 1s;}
+        .bottom{height:2px;width:0px;background:green;position:absolute;bottom:0;right:0;transition: all 1s;}
+        .left{height:0px;width:2px;background:green;position:absolute;bottom:0;left:0;transition: all 1s;}
+        .container:hover{width:100px}        
+    </style>
+    <script>
+        $(function(){
+            $(".container").hover(function(){
+                $(".top").css("width","100px");
+                $(".right").css("height","100px");
+                $(".bottom").css("width","100px");                
+                $(".left").css("height","100px");
+            },function(){
+                $(".top").css("width","0px");    
+                $(".right").css("height","0px");
+                $(".bottom").css("width","0px");                
+                $(".left").css("height","0px");            
+            });            
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+    </div>
+</body>
+</html>
