@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue-resource"></script>     -->
+    <script src="vue-resource.js"></script>
+    <!-- 引入vue-resource.js即可以使用$http -->    
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'body',
+                data:{
+                },
+                methods:{
+                    get:function(){
+                        //出现cors错误,访问无效时请将文件存放在iis中
+                        this.$http.get('/a.txt').then((response)=>{
+                            console.log(response);
+                        },(response)=>{
+                            console.log("error");
+                        })        
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" @click="get()">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
